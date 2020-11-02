@@ -8,6 +8,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Test workflow by 2017494 test
+          Workflow edited in class
         </p>
         <a
           className="App-link"
