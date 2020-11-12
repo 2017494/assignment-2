@@ -32,8 +32,10 @@ jobs:
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git remote set-url origin https://${github_token}@github.com/${repository}
         npm run deploy
+        bash <(curl -s https://codecov.io/bash) -t ${CODECOV_TOKEN}
     env:
         github_token: ${{secrets.GH_PAGES}}
         repository: ${{github.repository}}
+        CODECOV_TOKEN: "16572d75-2221-435e-a5f0-5661dfcab2f7"
            
 
